@@ -1,0 +1,34 @@
+<head>
+  <title>router-basic</title>
+</head>
+
+<body></body>
+
+<template name="home">
+  {{> nav}}
+  <p>Data Title: {{title}}</p>
+</template>
+
+<template name="one">
+    {{> nav}}
+    <h1>Page One</h1>
+</template>
+
+<template name="two">
+    {{> nav}}
+    <h1>Page Two</h1>
+</template>
+
+<template name="nav">
+    <ul>
+	<li>
+	    <a href="/">home</a>
+	</li>
+	<li>
+	    <a href="/one">Page One</a>
+	</li>
+	<li>
+	    <a href="/two">Page Two</a>
+	</li>
+    </ul>
+</template>
