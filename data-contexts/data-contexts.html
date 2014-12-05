@@ -23,7 +23,7 @@
   </article>
   
   <footer>
-      {{> yield footer}}
+      {{> yield "footer"}}
   </footer>
 </template>
 
@@ -31,7 +31,7 @@
     <h3>Page One title</h3>
     
     <p>
-	{{title}}
+	{{title1}}
     </p>
     
     {{#contentFor "footer"}}
@@ -43,7 +43,7 @@
     <h3>Page Two title</h3>
     
     <p>
-	{{title}}
+	{{title2}}
     </p>
     
     {{#contentFor "footer"}}

@@ -11,28 +11,32 @@ Router.route('/', function(){
 
 Router.route('/one', function(){
   this.layout('layout',{
+    data: 'Master Title'
+  });
+  
+    this.render('PageTwo',{
     data:{
-      title: 'Master Title'
+      title1: 'Region Specific Title One'
     }
   });
+
   
   this.render('PageOne',{
     data:{
-      title: 'Region Specific Title One'
+      title1: 'Region Specific Title One'
     }
   });
 });
 
 Router.route('/two', function(){
   this.layout('layout',{
-    data:{
-      title: 'Master Title'
-    }
+    data: 'Master Title'
   });
   
   this.render('PageTwo',{
     data:{
-      title: 'Region Specific Title Two'
+      to: 'footer',
+      title2: 'Region Specific Title Two'
     }
   });
 });
