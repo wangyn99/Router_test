@@ -7,8 +7,20 @@ Router.route('/', function(){
       title: 'Master Title'
     }
   });
+});
+
+Router.route('/one', function(){
+  this.layout('layout',{
+    data:{
+      title: 'Master Title'
+    }
+  });
   
-  this.render('PageOne');
+  this.render('PageOne',{
+    data:{
+      title: 'Region Specific Title One'
+    }
+  });
 });
 
 Router.route('/two', function(){
@@ -20,7 +32,7 @@ Router.route('/two', function(){
   
   this.render('PageTwo',{
     data:{
-      title: 'Region Specific Title'
+      title: 'Region Specific Title Two'
     }
   });
 });
