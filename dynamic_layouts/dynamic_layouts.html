@@ -25,6 +25,10 @@
 	<footer>
 	    {{> yield "footer"}}
 	</footer>
+	
+	<p>
+	{{> yield "test-contentFor"}}
+	</p>
     </div>
 </template>
 
@@ -54,6 +58,11 @@
     {{#contentFor "footer"}}
 	Page One Footer(contenfor)
     {{/contentFor}}
+    
+    {{#contentFor "test-contentFor"}}
+      Test contentFor
+      {{/contentFor}}
+    
 </template>
 
 <template name="PageTwo">
