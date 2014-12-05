@@ -7,36 +7,10 @@ Router.route('/', function(){
       title: 'Master Title'
     }
   });
-});
-
-Router.route('/one', function(){
-  this.layout('layout',{
-    data: 'Master Title'
-  });
-  
-    this.render('PageTwo',{
-    data:{
-      title1: 'Region Specific Title One'
-    }
-  });
-
-  
-  this.render('PageOne',{
-    data:{
-      title1: 'Region Specific Title One'
-    }
-  });
-});
-
-Router.route('/two', function(){
-  this.layout('layout',{
-    data: 'Master Title'
-  });
-  
+  this.render('PageOne',{data:{title1:'title one'}});
   this.render('PageTwo',{
-    data:{
-      to: 'footer',
-      title2: 'Region Specific Title Two'
-    }
-  });
+    to: 'footer',
+    data:{title2:'title two'}});
 });
+
+
