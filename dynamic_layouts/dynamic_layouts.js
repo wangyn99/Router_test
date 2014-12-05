@@ -24,6 +24,9 @@ Router.route('/two',function(){
   this.render('PageTwoFooter',{to: 'footer'});
 });
 
+
+//Router didn't have "use" function?
+
 /*Router.use(function(){
   if(!this.willBeHandledOnServer())
     console.error("No route found for url"+JSON.stringify(this.url)+".");
