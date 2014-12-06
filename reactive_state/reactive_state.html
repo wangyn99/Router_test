@@ -1,0 +1,45 @@
+<head>
+  <title>reactive_state</title>
+</head>
+
+<body>
+</body>
+
+<template name="appLayout">
+    <div class="container">
+	<nav>
+	    <ul>
+		<li>
+		    <a href="/posts/1">/posts/1</a>
+		</li>
+		<li>
+		    <a href="/posts/2">/posts/2</a>
+		</li>
+		<li>
+		    <a href="/posts/3">/posts/3</a>
+		</li>
+	    </ul>
+	</nav>
+	
+	<p>
+	    <pre>
+		var c =<strong>Iron</strong>.controller();
+		return c&& c.<strong>state</strong>.get('postId');
+	    </pre>
+	    
+	    Click the different links to see how we use the controller's reactive state variable
+	</p>
+	
+	<article>
+	    {{>yield }}
+	</article>
+    </div>
+</template>
+
+<template name='home'>
+    Home
+</template>
+
+<template name="post">
+    <h1>PostId: {{postId}}</h1>
+</template>
