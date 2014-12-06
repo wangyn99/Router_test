@@ -1,0 +1,42 @@
+<head>
+  <title>render_helper</title>
+</head>
+
+<body>
+    <div class="container">
+	<h1>My Application Container</h1>
+	{{> nav}}
+	
+	<div id="router-container">
+	    <div style="background: #ccc; padding: 5px;">
+		{{> Router}}
+	    </div>
+	</div>
+    </div>
+</body>
+
+<template name="home">
+    <h1>Home</h1>
+</template>
+
+<template name="one">
+    <h1>Page One</h1>
+</template>
+
+<template name="two">
+    <h1>Page Two</h1>
+</template>
+
+<template name="nav">
+    <ul>
+	<li>
+	    <a href="/">Home</a>
+	</li>
+	<li>
+	    <a href="/one">Page One</a>
+	</li>
+	<li>
+	    <a href="/two">Page Two</a>
+	</li>
+    </ul>
+</template>
