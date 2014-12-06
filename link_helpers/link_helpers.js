@@ -1,7 +1,8 @@
 Router.route('/', function(){
   this.render('home');
 },{
-  //provide a custom name
+  // here provide a custom name explicitly
+  //if you don't give it a name,the router will guess its name based on the path.
   name: 'home'
 });
 

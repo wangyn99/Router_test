@@ -29,15 +29,32 @@
 	    <a href="{{pathFor route='one'}}">/one</a> 
 	</li>
 	<li>
+	<!--we can pass data, query and options to the pathFor helper ,to generate a path for the given route -->
 	    <a href="{{pathFor route='one' query= 'q=s' hash='frag'}}">/one?q=s#frag</a>
 	</li>
 	<li>
+	<!--urlFor helper will generate a fully qualified url-->
 	    <a herf="{{urlFor route='one' query= 'q=s' hash='frag'}}">http://localhost:3000/one?q=s#frag</a>
 	</li>
 	<li>
+	<!--the linkTo helper generate the html for an anchor tag along with the path for the given route,patameters,hash and query.
+	The linkTo expression below will be transformed into html that looks like this:
+	<a href="/two?q=s#frag" class="myclass">
+	    <div style="...">
+		...
+	    </div>
+	</a>
+	-->
 	    {{#linkTo class="myclass" route="two" query="q=s" hash="frag"}}
 		<div style="color: green; font-weight: bold;">
 		    Custom Link to Page Two
+		</div>
+	    {{/linkTo}}
+	</li>
+	<li>
+	    {{#linkTo class="myclass" route="one" query="q=s" hash="frag"}}
+		<div style="color: green; font-weight: bold;">
+		    Custom Link to Page one
 		</div>
 	    {{/linkTo}}
 	</li>
